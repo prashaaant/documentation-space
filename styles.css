@@ -5,10 +5,55 @@ body {
     padding: 0;
 }
 
-h1 {
-    margin-top: 50px;
+.container {
+    display: flex;
+    height: 100vh;
 }
 
-p {
-    margin-top: 20px;
+.side-menu {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+}
+
+.side-menu .profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.side-menu .profile h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.side-menu .profile p {
+    margin: 0;
+    font-size: 1em;
+    color: #aaa;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.side-menu ul li a:hover {
+    background-color: #575757;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
 }
