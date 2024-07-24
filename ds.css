@@ -1,0 +1,48 @@
+/* Colors */
+:root {
+    --primary-color: #333;
+    --secondary-color: #575757;
+    --accent-color: #aaa;
+    --background-color: #fff;
+    --text-color: #000;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--accent-color);
+}
+
+s {
+    font-size: 1rem;
+    color: var(--accent-color);
+    padding-left: 1rem;
+}
+/* Utility Classes */
+.text-center {
+    text-align: left;
+}
+
+.margin-bottom {
+    margin-bottom: 1.25rem; /* 20px / 16 = 1.25rem */
+}

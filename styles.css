@@ -1,59 +1,88 @@
-body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+/* Assuming d.css is already imported */
 
-.container {
+.nav {
     display: flex;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
 }
 
 .side-menu {
-    width: 200px;
-    background-color: #333;
-    color: white;
-    padding-top: 20px;
+    width: 20rem; /* 200px / 16 = 12.5rem */
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding-top: 5rem; /* 20px / 16 = 1.25rem */
+    height: 100vh; /* Full screen height */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+   /* overflow-y: auto; /* Add scrolling if content overflows */
+    transition: transform 0.3s ease; /* Smooth transition for opening/closing */
 }
 
-.side-menu .profile {
-    text-align: center;
-    margin-bottom: 20px;
+.side-menuinfo {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
-
-.side-menu .profile h2 {
-    margin: 0;
-    font-size: 1.5em;
-}
-
-.side-menu .profile p {
-    margin: 0;
-    font-size: 1em;
-    color: #aaa;
-}
-
 .side-menu ul {
     list-style-type: none;
     padding: 0;
 }
 
 .side-menu ul li {
-    padding: 10px;
-    text-align: center;
+    padding: 1rem; /* 10px / 16 = 0.625rem */
+    text-align: left;
 }
 
 .side-menu ul li a {
-    color: white;
+    color: var(--background-color);
     text-decoration: none;
     display: block;
 }
 
 .side-menu ul li a:hover {
-    background-color: #575757;
+    background-color: var(--secondary-color);
 }
 
 .content {
+    margin-left: 20rem; /* Offset by the width of the side menu */
     flex-grow: 1;
-    padding: 20px;
+    padding-top: rem;
+    padding-left: 1.25rem; /* 20px / 16 = 1.25rem */
+    overflow-y: auto;
+    height: 100vh;
+    box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    .side-menu {
+        transform: translateX(-100%);
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        cursor: pointer;
+        z-index: 1000;
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Show the side menu when active */
+.side-menu.active {
+    transform: translateX(0);
 }
