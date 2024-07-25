@@ -1,4 +1,5 @@
 /* Colors */
+
 :root {
     --primary-color: #333;
     --secondary-color: #575757;
@@ -30,6 +31,7 @@ h2 {
 
 p {
     font-size: 1rem;
+    padding-left: 1rem;
     color: var(--accent-color);
 }
 
