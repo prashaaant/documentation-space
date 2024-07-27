@@ -5,4 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburger.addEventListener('click', function () {
         sideMenu.classList.toggle('active');
     });
+
+    // Get the current page
+    const currentPage = window.location.pathname.split('/').pop();
+    const currentLink = document.querySelector(`.side-menu a[href="${currentPage}"]`);
+    if (currentLink) {
+        currentLink.classList.add('active');
+    }
 });

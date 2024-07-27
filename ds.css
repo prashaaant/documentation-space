@@ -10,7 +10,7 @@
 
 /* Typography */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arya', sans-serif;
     color: var(--text-color);
     margin: 0;
     padding: 0;
@@ -22,23 +22,29 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2rem;
+    color: var(--primary-color);
 }
 
 h2 {
     font-size: 1.5rem;
-    padding-left: 1rem;
+    color: var(--primary-color);
+    line-height: 1.5rem;
+    margin-top: rem;
+    margin-bottom: 0rem;
 }
 
 p {
     font-size: 1rem;
-    padding-left: 1rem;
+    letter-spacing: 2%;
     color: var(--accent-color);
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
 }
 
 s {
     font-size: 1rem;
     color: var(--accent-color);
-    padding-left: 1rem;
+
 }
 /* Utility Classes */
 .text-center {
