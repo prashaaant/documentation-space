@@ -1,111 +1,77 @@
-/* Assuming d.css is already imported */
-
-.nav {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding-top: 5rem;
-    padding-left: 16rem;
-    padding-right: 16rem;
-    padding-bottom: 5rem;
-}
-
-
+/* Reset margins and padding for side menu and list */
 .side-menu {
-    width: 18rem; /* 200px / 16 = 12.5rem */
+    width: 20rem; /* Adjust width as needed */
     background-color: var(--background-color);
-    color: var(--background-color);
-    padding-top: 5rem; /* 20px / 16 = 1.25rem */
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    color: var(brand.base);
+    padding: 1rem;
     border-right: 1px solid var(--accent-color);
-    height: 100vh; /* Full screen height */
-    position: fixed; /* Fixed position */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
-   /* overflow-y: auto; /* Add scrolling if content overflows */
-    transition: transform 0.3s ease; /* Smooth transition for opening/closing */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
-.side-menuinfo {
-    padding-left: 0rem;
-    padding-right: 1rem;
+.info {
+    margin-bottom: 1rem;
 }
 .side-menu ul {
-    list-style-type: none;
     padding: 0;
+    margin: 0;
+    list-style: none; /* Ensure no default list styles */
 }
 
 .side-menu ul li {
-    padding-left: 0rem;
-    text-align: left;
-    /* padding-top: 0.5rem; */
-    /* padding-bottom: 0.5rem; */
-    margin-bottom: 4px;
+    margin-bottom: 4px; /* Space between list items */
 }
-
-.side-menu ul li:last-child {
-    margin-bottom: 0; /* Remove margin from the last item to avoid extra space */
-}
-
-.menu-icon ul li .icon{
-    /* padding: 1rem; */
-    padding-left: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem; /* Container for icon */
-    height: 2rem;
-}
-
-.side-menu ul li a.active .icon{
-    filter: invert(100%);
-  }
 
 .side-menu ul li a {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    text-decoration: none;
     display: flex;
-    margin-block-end: 0.5rem;
     align-items: center;
-    color: var(--primary-color);
-    padding: 0.5rem; /* Default padding */
-    transition: padding 0.3s ease; /* Smooth transition for hover effect */
-}
-
-
-.side-menu ul li a:hover {
-    background-color: var(--secondary-color);
+    text-decoration: none;
+    color: var(brand.base); /* Default text color */
+    padding: 0.5rem;
     border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    box-sizing: border-box;
 }
 
+.side-menu ul li a:hover,
 .side-menu ul li a.active {
-    background-color: var(--secondary-color); /* Or any desired highlight color */
-    color: #fff; /* Adjust text color if needed */
-    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    /* padding: 1rem; Increased padding on hover */
 }
 
+.side-menu ul li a img {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(10%) saturate(2076%) hue-rotate(86deg) brightness(92%) contrast(95%) !important;
+}
+
+.side-menu ul li a:hover img,
+.side-menu ul li a.active img {
+    filter: brightness(0) saturate(100%) invert(93%) sepia(93%) saturate(27%) hue-rotate(189deg) brightness(106%) contrast(106%) !important;
+}
+
+/* Ensure content area does not overlap with side menu */
 .content {
     margin-left: 20rem; /* Offset by the width of the side menu */
-    flex-grow: 1;
-    padding-top: rem;
-    padding-left: 1.25rem; /* 20px / 16 = 1.25rem */
+    padding: 1rem;
+    padding-left: 4rem;
+    box-sizing: border-box; /* Include padding in the width */
     overflow-y: auto;
-    height: 100vh;
-    box-sizing: border-box; /* Include padding in the height calculation */
+    height: 100vh; /* Full viewport height */
 }
 
 /* Media query for smaller devices */
 @media (max-width: 768px) {
     .side-menu {
         transform: translateX(-100%);
+        width: 100vw; /* Full width on small screens */
     }
 
     .content {
-        margin-left: 0;
+        margin-left: 0; /* Reset margin for smaller screens */
     }
 
     .hamburger {
@@ -116,7 +82,7 @@
         font-size: 2rem;
         background: none;
         border: none;
-        color: var(--primary-color);
+        color: var(brand.base);
         cursor: pointer;
         z-index: 1000;
     }
@@ -126,7 +92,6 @@
     display: none;
 }
 
-/* Show the side menu when active */
 .side-menu.active {
     transform: translateX(0);
 }
