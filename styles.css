@@ -1,9 +1,9 @@
 /* Reset margins and padding for side menu and list */
 .side-menu {
-    width: 20rem; /* Adjust width as needed */
+    width: 22rem; /* Adjust width as needed */
     background-color: var(--background-color);
     color: var(brand.base);
-    padding: 1rem;
+    padding: 2rem;
     border-right: 1px solid var(--accent-color);
     height: 100vh;
     position: fixed;
@@ -55,7 +55,7 @@
 
 /* Ensure content area does not overlap with side menu */
 .content {
-    margin-left: 20rem; /* Offset by the width of the side menu */
+    margin-left: 22rem; /* Offset by the width of the side menu */
     padding: 1rem;
     padding-left: 4rem;
     box-sizing: border-box; /* Include padding in the width */
@@ -71,7 +71,8 @@
     }
 
     .content {
-        margin-left: 0; /* Reset margin for smaller screens */
+        /* margin-left: 0; Reset margin for smaller screens */
+        margin: auto;
     }
 
     .hamburger {

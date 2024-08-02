@@ -39,8 +39,8 @@ b1 {
     line-height: normal;
     letter-spacing: 2%;
     color: var(brand.base);
-    margin-top: 0rem;
-    margin-bottom: -1rem; 
+    margin-top: 0.25rem;
+    margin-bottom: 0rem; 
 }
 
 
