@@ -1,4 +1,6 @@
-# Documentation Space
+# Portfolio v1 (archived)
+
+> **Archived:** this was my first site and my very first repository. My current personal site lives at [quantum-profile](https://github.com/prashaaant/quantum-profile).
 
 A public space for my work, thoughts and aspirations, built as a responsive single-page site with a side menu.
 
